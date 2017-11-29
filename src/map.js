@@ -21,4 +21,9 @@ first argument
 
 const map = function(arr, callback) {
   // implement map here
+  const result = []
+  for(let i = 0; i < arr.length; i++) {
+    result.push(callback(arr[i], i, arr))
+  }
+  return result;
 }
